@@ -1,10 +1,10 @@
 import { BiCaretDown } from 'react-icons/bi';
 import { useTheme } from '../../context/ThemeProvider';
 function Card({ social, followers, increase, bg, imgsrc }) {
-  const { cardBg, secondaryText, mainText } = useTheme();
+  const { cardBg, secondaryText, mainText, cardBgHover } = useTheme();
   return (
     <div
-      className={`shadow-md rounded-md overflow-hidden h-52 w-full md:w-1/4 ${cardBg}`}
+      className={`cursor-pointer shadow-md rounded-md overflow-hidden h-52 w-full md:w-1/4 ${cardBg} transition-all ${cardBgHover}`}
       style={{ borderTopWidth: '4px', borderStyle: 'solid', borderColor: bg }}
     >
       <div className="flex flex-col items-center justify-center gap-4 h-full">
