@@ -7,6 +7,7 @@ const ThemeContext = createContext({
   mainText: '',
   secondaryText: '',
   cardBg: '',
+  cardBgHover: '',
 });
 
 export function ThemeProvider({ children }) {
@@ -15,13 +16,24 @@ export function ThemeProvider({ children }) {
   const mainText = !darkMode ? 'text-dark-bg' : 'text-white';
   const secondaryText = !darkMode ? 'text-light-text' : 'text-dark-text';
   const cardBg = !darkMode ? 'bg-light-card' : 'bg-dark-card';
+  const cardBgHover = !darkMode
+    ? 'hover:bg-light-card-hover'
+    : 'hover:bg-dark-card-hover';
 
   function toggleTheme() {
     setDarkMode(prev => !prev);
   }
   return (
     <ThemeContext.Provider
-      value={{ darkMode, toggleTheme, bg, mainText, secondaryText, cardBg }}
+      value={{
+        darkMode,
+        toggleTheme,
+        bg,
+        mainText,
+        secondaryText,
+        cardBg,
+        cardBgHover,
+      }}
     >
       {children}
     </ThemeContext.Provider>
