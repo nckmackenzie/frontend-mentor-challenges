@@ -17,7 +17,7 @@ function Header() {
             >
               social media dashboard
             </h1>
-            <div className={`text-xs font-bold ${secondaryText}`}>
+            <div className={`text-sm font-bold ${secondaryText}`}>
               Total followers: 23,004
             </div>
           </div>
