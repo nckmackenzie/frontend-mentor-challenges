@@ -28,3 +28,62 @@ export const followers = [
     imgsrc: './icon-youtube.svg',
   },
 ];
+
+export const overviews = [
+  {
+    id: 1,
+    type: 'page views',
+    count: '87',
+    icon: './icon-facebook.svg',
+    increase: 3,
+  },
+  {
+    id: 2,
+    type: 'likes',
+    count: '52',
+    icon: './icon-facebook.svg',
+    increase: -2,
+  },
+  {
+    id: 3,
+    type: 'likes',
+    count: '5462',
+    icon: './icon-instagram.svg',
+    increase: 2257,
+  },
+  {
+    id: 4,
+    type: 'profile views',
+    count: '52k',
+    icon: './icon-instagram.svg',
+    increase: 1375,
+  },
+  {
+    id: 5,
+    type: 'retweets',
+    count: '117',
+    icon: './icon-twitter.svg',
+    increase: 303,
+  },
+  {
+    id: 6,
+    type: 'likes',
+    count: '507',
+    icon: './icon-twitter.svg',
+    increase: 553,
+  },
+  {
+    id: 7,
+    type: 'likes',
+    count: '107',
+    icon: './icon-youtube.svg',
+    increase: 107,
+  },
+  {
+    id: 8,
+    type: 'total views',
+    count: '1407',
+    icon: './icon-youtube.svg',
+    increase: -12,
+  },
+];
