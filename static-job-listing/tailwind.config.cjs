@@ -21,7 +21,7 @@ module.exports = {
         'grayish-cyan-400': 'hsl(180, 52%, 96%)',
         'grayish-cyan-300': 'hsl(180, 31%, 95%)',
         'grayish-cyan-600': 'hsl(180, 8%, 52%)',
-        'grayish-cyan-600': 'hsl(180, 14%, 20%)',
+        'grayish-cyan-700': 'hsl(180, 14%, 20%)',
       },
       backgroundImage: {
         'hero-pattern-desktop': 'url("/src/assets/bg-header-desktop.svg")',
