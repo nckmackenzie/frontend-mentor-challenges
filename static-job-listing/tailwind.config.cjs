@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontSize: {
       app: '15px',
+      small: '14px',
     },
     container: {
       center: true,
