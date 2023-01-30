@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .nav-item {
+    @apply text-md text-grayish-blue-600 transition-all hover:text-primary;
+  }
+}
