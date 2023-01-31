@@ -2,6 +2,7 @@ class Controller {
   #filterBox;
   #listings;
   #container;
+  #filters;
   constructor(app) {
     this.#container = app;
     this.#renderHeader();
@@ -14,6 +15,7 @@ class Controller {
     this.#container.insertAdjacentHTML('beforebegin', html);
     this.#container.insertAdjacentHTML('afterbegin', this.#main());
     this.#filterBox = document.querySelector('.filter-box');
+    this.#filters = document.querySelector('.filters');
     this.#listings = document.querySelector('section');
   }
 
@@ -23,7 +25,10 @@ class Controller {
       <main>
         <div class="container">
           <div class="w-full relative h-16 hidden">
-            <div class="filter-box"></div>
+            <div class="filter-box">
+              <div class="filters"></div>
+              <button class="clear-btn">Clear</button>
+            </div>
           </div>
           <section class="pt-8 flex flex-col gap-4"></section>
         </div>
@@ -90,11 +95,33 @@ class Controller {
     return html;
   }
 
-  setFilters(jobs) {
+  setFilters(jobs, filters) {
     this.#filterBox.parentElement.classList.remove('hidden');
     this.#listings.classList.remove('pt-8');
     this.#listings.classList.add('pt-4');
     this.#renderJobs(jobs);
+    this.#setFilterTabs(filters);
+  }
+
+  clearFilters(jobs) {
+    this.#filterBox.parentElement.classList.add('hidden');
+    this.#filters.innerHTML = '';
+    this.#listings.classList.remove('pt-4');
+    this.#listings.classList.add('pt-8');
+    this.#renderJobs(jobs);
+  }
+
+  #setFilterTabs(filters) {
+    this.#filters.innerHTML = '';
+    filters.forEach(filter => {
+      let html = `<div class="flex">
+      <div class="bg-grayish-cyan-400 text-primary text-small flex items-center px-1">${filter}</div>
+      <button class="remove-filter">&times;</button>
+    </div>`;
+      this.#filters.insertAdjacentHTML('beforeend', html);
+    });
+
+    // return html;
   }
 }
 
