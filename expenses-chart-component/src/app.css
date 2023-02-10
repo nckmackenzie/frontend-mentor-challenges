@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bar {
+    @apply bg-primary rounded cursor-pointer transition-all hover:bg-primary-300;
+  }
+}
+
+[tip] .tooltip {
+  position: fixed;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 4px;
+  background: hsl(25, 47%, 15%);
+  color: #fff;
+  border-radius: 5px;
+  visibility: hidden;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s, visiblity 0s;
+}
+[tip]:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}

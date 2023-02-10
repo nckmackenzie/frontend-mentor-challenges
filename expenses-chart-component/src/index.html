@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense Chart Component</title>
+  </head>
+  <body class="bg-cream font-main">
+    <main class="flex items-center justify-center min-h-screen px-2 lg:px-0">
+      <div class="max-w-sm w-full flex flex-col gap-4">
+        <div
+          class="bg-primary p-4 rounded-xl shadow w-full flex items-center justify-between"
+        >
+          <div class="flex flex-col gap-1">
+            <span class="text-sm text-pale-orange">My Balance</span>
+            <div class="text-xl font-bold text-pale-orange">$921.48</div>
+          </div>
+          <img src="/logo.svg" alt="logo" class="w-12 h-12" />
+        </div>
+        <div
+          class="p-4 bg-pale-orange shadow w-full rounded-xl flex flex-col gap-2"
+        >
+          <h1 class="text-dark-brown text-2xl font-bold">
+            Spending - Last 7 Days
+          </h1>
+          <div
+            class="py-2 grid grid-cols-7 h-32 gap-2 border-b border-solid border-medium-brown"
+            id="bar-chart"
+          ></div>
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col gap-1">
+              <span class="text-xs text-medium-brown">Total this month</span>
+              <h4
+                class="text-dark-brown text-3xl font-bold"
+                id="total-amount"
+              ></h4>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-xs text-dark-brown font-bold">+2.4%</span>
+              <span class="text-xs text-medium-brown">from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
