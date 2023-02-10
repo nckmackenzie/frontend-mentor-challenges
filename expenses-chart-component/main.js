@@ -1,16 +1,45 @@
 const totalDiv = document.getElementById('total-amount');
 const barGraphArea = document.getElementById('bar-chart');
+
+const expenses = [
+  {
+    day: 'mon',
+    amount: 17.45,
+  },
+  {
+    day: 'tue',
+    amount: 34.91,
+  },
+  {
+    day: 'wed',
+    amount: 52.36,
+  },
+  {
+    day: 'thu',
+    amount: 31.07,
+  },
+  {
+    day: 'fri',
+    amount: 23.39,
+  },
+  {
+    day: 'sat',
+    amount: 43.28,
+  },
+  {
+    day: 'sun',
+    amount: 25.48,
+  },
+];
+
 const getData = async () => {
-  //fetch data from json file
-  const response = await fetch('data.json');
-  const data = await response.json();
   //get totals
-  const totalAmount = data.reduce((acc, cur) => acc + cur.amount, 0);
+  const totalAmount = expenses.reduce((acc, cur) => acc + cur.amount, 0);
   //get highest value
-  const highestValue = Math.max(...data.map(dt => dt.amount));
+  const highestValue = Math.max(...expenses.map(dt => dt.amount));
 
   totalDiv.textContent = `$${totalAmount}`;
-  data.forEach(dt => {
+  expenses.forEach(dt => {
     const heightPercent = `${Math.round((+dt.amount / +highestValue) * 100)}%`;
     // console.log(heightPercent);
     let html = `
