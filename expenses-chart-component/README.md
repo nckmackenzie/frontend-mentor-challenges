@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/nckmackenzie/frontend-mentor-challenges/tree/main/expenses-chart-component](https://github.com/nckmackenzie/frontend-mentor-challenges/tree/main/expenses-chart-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://expense-barchart-component.netlify.app/](https://expense-barchart-component.netlify.app/)
 
 ## My process
 
