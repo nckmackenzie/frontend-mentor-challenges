@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-item {
+    @apply text-secondary-300 transition-all hover:text-secondary-700 text-xs font-medium;
+  }
+
+  .btn {
+    @apply font-medium  text-white transition-all hover:opacity-75;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-xs;
+  }
+
+  .btn-md {
+    @apply px-6 py-3 text-sm;
+  }
+
+  /* .btn-primary {
+    @apply bg-primary px-4 font-medium py-2 rounded-full text-xs text-white transition-all hover:opacity-75;
+  } */
+}
