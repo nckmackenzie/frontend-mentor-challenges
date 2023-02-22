@@ -1,4 +1,4 @@
-import bgDesktop from './assets/illustration-working.svg';
+import bgDesktop from '../assets/illustration-working.svg';
 function Hero() {
   return (
     <div className="flex flex-col-reverse items-center gap-4 md:grid md:gap-8 md:grid-cols-2 pt-12 pb-24">

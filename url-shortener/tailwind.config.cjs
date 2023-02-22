@@ -22,6 +22,9 @@ module.exports = {
         'secondary-700': 'hsl(260, 8%, 14%)',
         error: 'hsl(0, 87%, 67%)',
       },
+      backgroundImage: {
+        'hero-lg': "url('./src/assets/bg-shorten-desktop.svg')",
+      },
     },
     fontFamily: {
       bodytext: ['Poppins', 'sans-serif'],
