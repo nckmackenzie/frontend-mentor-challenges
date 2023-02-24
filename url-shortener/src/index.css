@@ -24,6 +24,14 @@
     @apply px-6 py-3 text-sm;
   }
 
+  .input {
+    @apply bg-gray-50 border  text-gray-900 text-sm rounded-lg block p-2.5 w-full;
+  }
+
+  .error {
+    @apply bg-red-50 border-red-500 focus:ring-red-500;
+  }
+
   /* .btn-primary {
     @apply bg-primary px-4 font-medium py-2 rounded-full text-xs text-white transition-all hover:opacity-75;
   } */

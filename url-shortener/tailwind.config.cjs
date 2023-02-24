@@ -24,6 +24,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-lg': "url('./src/assets/bg-shorten-desktop.svg')",
+        'hero-sm': "url('./src/assets/bg-shorten-mobile.svg')",
       },
     },
     fontFamily: {

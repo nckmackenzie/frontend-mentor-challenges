@@ -1,3 +1,7 @@
+import CTA from './components/CTA';
+import Features from './components/Features';
+import Footer from './components/Footer';
+import Form from './components/Form';
 import Header from './components/Header';
 import Hero from './components/Hero';
 
@@ -10,11 +14,10 @@ function App() {
           <Hero />
         </div>
       </div>
-      <div className="container">
-        <div className="rounded h-24 bg-hero-lg bg-accent bg-no-repeat bg-cover -mt-12 flex items-center px-8">
-          <input type="text" />
-        </div>
-      </div>
+      <Form />
+      <Features />
+      <CTA />
+      <Footer />
     </>
   );
 }
