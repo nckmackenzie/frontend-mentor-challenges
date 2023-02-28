@@ -16,6 +16,10 @@
     @apply bg-primary text-white;
   }
 
+  .btn-accent {
+    @apply bg-accent text-white;
+  }
+
   .btn-sm {
     @apply px-4 py-2 text-xs;
   }

@@ -1,15 +1,26 @@
 import React from 'react';
+import { getUrl } from '../data/ajax';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 function Form() {
   const [hasError, setHasError] = React.useState(false);
+  const { saveToStorage } = useLocalStorage();
   const inputRef = React.useRef();
-  const formSubmit = function (e) {
+  const formSubmit = async function (e) {
     e.preventDefault();
     setHasError(false);
     if (String(inputRef.current.value).trim() === '') {
       setHasError(true);
       return;
     }
+
+    const { data } = await getUrl(inputRef.current.value);
+    const linkShortened = {
+      fullUrl: String(inputRef.current.value).trim(),
+      shortened: data.result_url,
+    };
+    saveToStorage(linkShortened);
+    inputRef.current.value = '';
   };
   return (
     <div className="container">
